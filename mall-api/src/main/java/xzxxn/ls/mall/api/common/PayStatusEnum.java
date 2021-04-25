@@ -1,13 +1,18 @@
 package xzxxn.ls.mall.api.common;
 
 public enum PayStatusEnum {
-
+    /**
+     * 支付失败
+     */
     DEFAULT(-1, "支付失败"),
-
+    /**
+     * 支付中
+     */
     PAY_ING(0, "支付中"),
-
-    PAY_SUCCESS(1, "支付成功"),
-    ;
+    /**
+     * 支付成功
+     */
+    PAY_SUCCESS(1, "支付成功");
 
     private int payStatus;
 
@@ -20,7 +25,7 @@ public enum PayStatusEnum {
 
     public static PayStatusEnum getPayStatusEnumByStatus(int payStatus) {
         for (PayStatusEnum payStatusEnum : PayStatusEnum.values()) {
-            if (payStatusEnum .getPayStatus() == payStatus) {
+            if (payStatusEnum.getPayStatus() == payStatus) {
                 return payStatusEnum;
             }
         }

@@ -19,14 +19,14 @@ class MallUserMapperTest {
 
     @Test
     void selectByPrimaryKey() {
-        MallUser mallUser = mallUserMapper.selectByPrimaryKey(1L);
-        System.out.println(mallUser);
+//        MallUser mallUser = mallUserMapper.selectByPrimaryKey(1L);
+//        System.out.println(mallUser);
     }
 
     @Test
     void selectAll() {
-        List<MallUser> mallUsers = mallUserMapper.selectAll();
-        System.out.println(mallUsers);
+//        List<MallUser> mallUsers = mallUserMapper.selectAll();
+//        System.out.println(mallUsers);
     }
 
 }

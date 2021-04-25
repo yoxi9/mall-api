@@ -4,9 +4,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
-
+/**
+ * @author mqxu
+ */
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
+
     /**
      * 业务码，比如成功、失败、权限不足等 code，可自行定义
      */
@@ -57,6 +60,10 @@ public class Result<T> implements Serializable {
 
     @Override
     public String toString() {
-        return "Result{" + "resultCode=" + resultCode + ", message='" + message + '\'' + ", data=" + data + '}';
+        return "Result{" +
+                "resultCode=" + resultCode +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

@@ -1,17 +1,22 @@
 package xzxxn.ls.mall.api.mapper;
 
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 import xzxxn.ls.mall.api.entity.MallCarousel;
 
-public interface MallCarouselMapper {
-    int deleteByPrimaryKey(Integer carouselId);
+import java.util.List;
 
-    int insert(MallCarousel record);
-
-    int insertSelective(MallCarousel record);
-
-    MallCarousel selectByPrimaryKey(Integer carouselId);
-
-    int updateByPrimaryKeySelective(MallCarousel record);
-
-    int updateByPrimaryKey(MallCarousel record);
+public interface MallCarouselMapper extends BaseMapper<MallCarousel> {
+    /**
+     * 查询number个轮播图数据
+     *
+     * @param number 数量
+     * @return 轮播图
+     */
+    List<MallCarousel> findCarouselsByNum(@Param("number") int number);
 }
+
+
+
+

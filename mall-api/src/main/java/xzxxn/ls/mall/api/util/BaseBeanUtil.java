@@ -9,8 +9,12 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.util.*;
 
-
+/**
+ * @author mqxu
+ * @description: 实体类工具，属性拷贝
+ */
 public abstract class BaseBeanUtil {
+
     public static Object copyProperties(Object source, Object target, String... ignoreProperties) {
         if (source == null) {
             return target;
@@ -71,7 +75,11 @@ public abstract class BaseBeanUtil {
     }
 
     /**
-     * 检查Pojo对象是否有null字段     *     * @param o   入参对象     * @param clz 类型     * @return boolean
+     * 检查Pojo对象是否有null字段
+     *
+     * @param o   入参对象
+     * @param clz 类型
+     * @return boolean
      */
     public static boolean checkPojoNullField(Object o, Class<?> clz) {
         try {

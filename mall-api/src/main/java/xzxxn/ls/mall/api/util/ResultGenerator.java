@@ -2,7 +2,11 @@ package xzxxn.ls.mall.api.util;
 
 import org.springframework.util.StringUtils;
 
+/**
+ * @description: 响应结果生成工具
+ * @author mqxu
 
+ */
 public class ResultGenerator {
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
     private static final String DEFAULT_FAIL_MESSAGE = "FAIL";

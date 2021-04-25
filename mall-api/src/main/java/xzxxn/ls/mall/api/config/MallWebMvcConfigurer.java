@@ -1,5 +1,6 @@
 package xzxxn.ls.mall.api.config;
 
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -12,11 +13,14 @@ import java.util.List;
 
 @Configuration
 public class MallWebMvcConfigurer implements WebMvcConfigurer {
+
     @Resource
     private TokenToMallUserMethodArgumentResolver tokenToMallUserMethodArgumentResolver;
 
     /**
-     * TokenToMallUser 注解处理方法     *     * @param argumentResolvers 参数解析器
+     * TokenToMallUser 注解处理方法
+     *
+     * @param argumentResolvers 参数解析器
      */
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {

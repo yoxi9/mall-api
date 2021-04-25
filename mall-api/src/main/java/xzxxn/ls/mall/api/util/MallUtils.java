@@ -4,7 +4,12 @@ import org.springframework.util.StringUtils;
 
 import java.net.URI;
 
+/**
+ * @author mqxu
+ * @description: 商城工具类
+ */
 public class MallUtils {
+
     public static URI getHost(URI uri) {
         URI effectiveURI = null;
         try {

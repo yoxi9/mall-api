@@ -2,8 +2,12 @@ package xzxxn.ls.mall.api.util;
 
 import java.security.MessageDigest;
 
-
+/**
+ * @author mqxu
+ * @description: md5加密工具
+ */
 public class Md5Util {
+
     private static String byteArrayToHexString(byte b[]) {
         StringBuilder resultSb = new StringBuilder();
         for (byte value : b) {
@@ -28,9 +32,11 @@ public class Md5Util {
             resultString = origin;
             MessageDigest md = MessageDigest.getInstance("MD5");
             if (charsetName == null || "".equals(charsetName)) {
-                resultString = byteArrayToHexString(md.digest(resultString.getBytes()));
+                resultString = byteArrayToHexString(md.digest(resultString
+                        .getBytes()));
             } else {
-                resultString = byteArrayToHexString(md.digest(resultString.getBytes(charsetName)));
+                resultString = byteArrayToHexString(md.digest(resultString
+                        .getBytes(charsetName)));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -38,5 +44,6 @@ public class Md5Util {
         return resultString;
     }
 
-    private static final String[] HEX_DIGITS = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
+    private static final String[] HEX_DIGITS = {"0", "1", "2", "3", "4", "5",
+            "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
 }

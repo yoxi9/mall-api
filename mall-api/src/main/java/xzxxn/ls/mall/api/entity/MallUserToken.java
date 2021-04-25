@@ -1,33 +1,41 @@
 package xzxxn.ls.mall.api.entity;
 
-import java.util.Date;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+import java.util.Date;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MallUserToken {
+@TableName("tb_mall_user_token")
+public class MallUserToken implements Serializable {
     /**
-    * 用户主键id
-    */
+     * 用户主键id
+     */
+    @TableId
     private Long userId;
 
     /**
-    * token值(32位字符串)
-    */
+     * token值(32位字符串)
+     */
     private String token;
 
     /**
-    * 修改时间
-    */
+     * 修改时间
+     */
     private Date updateTime;
 
     /**
-    * token过期时间
-    */
+     * token过期时间
+     */
     private Date expireTime;
+
+    private static final long serialVersionUID = 1L;
 }

@@ -3,8 +3,12 @@ package xzxxn.ls.mall.api.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * @author mqxu
+ * @description: 数字工具
+ */
 public class NumberUtil {
+
     private NumberUtil() {
     }
 
@@ -21,7 +25,10 @@ public class NumberUtil {
     }
 
     /**
-     * 生成指定长度的随机数     *     * @param length 长度     * @return int
+     * 生成指定长度的随机数
+     *
+     * @param length 长度
+     * @return int
      */
     public static int genRandomNum(int length) {
         int num = 1;
@@ -36,7 +43,9 @@ public class NumberUtil {
     }
 
     /**
-     * 生成订单流水号     *     * @return 订单流水号
+     * 生成订单流水号
+     *
+     * @return 订单流水号
      */
     public static String genOrderNo() {
         StringBuilder strBuilder = new StringBuilder(String.valueOf(System.currentTimeMillis()));

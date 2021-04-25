@@ -1,15 +1,27 @@
 package xzxxn.ls.mall.api.common;
 
+/**
+ * @description: 支付类型枚举:0.无 1.支付宝 2.微信支付
+ * @author: mqxu
+ * @since: 2021-04-20
+ **/
 public enum PayTypeEnum {
-
+    /**
+     * 默认值
+     */
     DEFAULT(-1, "ERROR"),
-
+    /**
+     * 无
+     */
     NOT_PAY(0, "无"),
-
+    /**
+     * 支付宝
+     */
     ALI_PAY(1, "支付宝"),
-
-    WECHAT_PAY(2, "微信支付"),
-    ;
+    /**
+     * 微信支付
+     */
+    WECHAT_PAY(2, "微信支付");
 
     private int payType;
 

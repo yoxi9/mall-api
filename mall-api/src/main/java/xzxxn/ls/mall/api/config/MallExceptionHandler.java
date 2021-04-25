@@ -1,5 +1,6 @@
 package xzxxn.ls.mall.api.config;
 
+
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -14,6 +15,7 @@ import java.util.Objects;
 
 @RestControllerAdvice
 public class MallExceptionHandler {
+
     @ExceptionHandler(BindException.class)
     public Object bindException(BindException e) {
         Result result = new Result();
@@ -35,7 +37,8 @@ public class MallExceptionHandler {
     @ExceptionHandler(Exception.class)
     public Object handleException(Exception e, HttpServletRequest req) {
         Result result = new Result();
-        result.setResultCode(500);        //区分是否为自定义异常
+        result.setResultCode(500);
+        //区分是否为自定义异常
         if (e instanceof MallException) {
             result.setMessage(e.getMessage());
             if (e.getMessage().equals(ServiceResultEnum.NOT_LOGIN_ERROR.getResult()) || e.getMessage().equals(ServiceResultEnum.TOKEN_EXPIRE_ERROR.getResult())) {
@@ -46,5 +49,6 @@ public class MallExceptionHandler {
             result.setMessage("未知异常，请联系管理员");
         }
         return result;
+
     }
 }
