@@ -44,6 +44,7 @@ public class MallUserServiceImpl implements MallUserService {
                 .nickName(loginName)
                 .introduceSign(Constants.USER_INTRO)
                 .passwordMd5(Md5Util.encode(password, "UTF-8"))
+                .avatar("https://brain-music.oss-cn-shanghai.aliyuncs.com/me.jpg")
                 .build();
         //调用新增方法，返回受影响的记录行数不为0，则新增成功
         if (mallUserMapper.insert(registerUser) > 0) {
@@ -123,6 +124,7 @@ public class MallUserServiceImpl implements MallUserService {
         user.setNickName(mallUser.getNickName());
         user.setPasswordMd5(mallUser.getPasswordMd5());
         user.setIntroduceSign(mallUser.getIntroduceSign());
+        user.setAvatar(mallUser.getAvatar());
         return mallUserMapper.update(user, query) > 0;
     }
 

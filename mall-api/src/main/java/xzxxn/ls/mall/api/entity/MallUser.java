@@ -64,5 +64,11 @@ public class MallUser implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
+    /**
+     * 头像
+     */
+
+    private String avatar;
+
     private static final long serialVersionUID = 1L;
 }
